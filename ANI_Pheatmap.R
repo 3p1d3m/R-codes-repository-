@@ -29,19 +29,29 @@ Pathotype <- c("pathogenic", "pathogenic", "non-pathogenic", "non-pathogenic",
 Source <- c("clinical", "clinical", "clinical", "waste water", 
             "baboons", "baboons", "waste water", "clinical",
             "clinical", "clinical", "baboons", "waste water")
+ESBL <- c("Resistant", "Resistant", "Sensitive", "Resistant",
+          "Resistant", "Sensitive", "Sensitive", "Resistant",
+          "Resistant", "Resistant", "Sensitive", "Sensitive")
 
 # Annotation colors
 group_colors <- c("pathogenic" = "#E41A1C", "non-pathogenic" = "#377EB8")
 source_colors <- c("clinical" = "#4DAF4A", "waste water" = "#984EA3", "baboons" = "#FF7F00")
+esbl_colors <- c("Resistant" = "#A65628", "Sensitive" = "#999999")
 
 # Heatmap annotations
 ha <- HeatmapAnnotation(
   Pathotype = Pathotype,
   Source = Source,
-  col = list(Pathotype = group_colors, Source = source_colors),
+  ESBL = ESBL,
+  col = list(
+    Pathotype = group_colors,
+    Source = source_colors,
+    ESBL = esbl_colors
+  ),
   annotation_legend_param = list(
     Pathotype = list(title = "Pathotype"),
-    Source = list(title = "Sample Source")
+    Source = list(title = "Sample Source"),
+    ESBL = list(title = "ESBL Profile")
   )
 )
 
