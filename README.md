@@ -1,2 +1,3 @@
 ANI_extended visulaisation in R 
-![image](https://github.com/user-attachments/assets/03b3bf09-5cd9-4951-a4e0-e8e307e6b691)
+![image](https://github.com/user-attachments/assets/0065c05f-9054-483c-9b81-48ff4c7b628e)
+
